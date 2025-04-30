@@ -1,12 +1,13 @@
 import styles from './Heading.module.css';
 
-export function Heading(props) {
-  console.log(props);
+type HeadingProps = {
+  children: React.ReactNode;
+};
 
+export function Heading({ children }: HeadingProps) {
   return (
     <>
-      <h1 className={styles.heading}>Vindo do Heading!</h1>
-      <h2 className={styles.heading}>{props.children}</h2>
+      <h1 className={styles.heading}>{children}</h1>
     </>
   );
 }
