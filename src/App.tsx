@@ -1,14 +1,14 @@
 import './styles/theme.css';
 import './styles/global.css';
 
-import { Heading } from './components/Heading';
 import { Container } from './components/Container';
+import { Logo } from './components/Logo';
 
 function App() {
   return (
     <>
       <Container>
-        <Heading>LOGO</Heading>
+        <Logo />
       </Container>
 
       <Container>
