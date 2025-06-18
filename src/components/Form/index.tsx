@@ -13,7 +13,7 @@ export function Form() {
 
       <div className={styles.formRow}>
         <p>
-          Próximo intervalo é de <h1>20 minutos</h1>
+          Próximo intervalo é de <h1>25 minutos</h1>
         </p>
       </div>
 
