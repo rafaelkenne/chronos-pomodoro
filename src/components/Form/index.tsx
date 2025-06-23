@@ -3,12 +3,26 @@ import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DeafultButton';
 import { DefaultInput } from '../DeafultInput';
 import styles from './styles.module.css';
+import { useState } from 'react';
 
 export function Form() {
+  const [taskName, setTaskName] = useState('');
+
+  function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    console.log('Deu certo!', taskName);
+  }
   return (
-    <form className={styles.form} action='#'>
+    <form onSubmit={handleCreateNewTask} className={styles.form} action='#'>
       <div className='formRow'>
-        <DefaultInput labelText='Task' id='meuInput' type='text' placeholder='Digite Algo' />
+        <DefaultInput
+          labelText='Task'
+          id='meuInput'
+          type='text'
+          placeholder='Digite Algo'
+          value={taskName}
+          onChange={e => setTaskName(e.target.value)}
+        />
       </div>
 
       <div className={styles.formRow}>

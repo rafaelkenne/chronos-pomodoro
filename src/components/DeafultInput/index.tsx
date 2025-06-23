@@ -11,7 +11,7 @@ export function DefaultInput({ id, type, labelText, ...rest }: DeafultInputProps
     <>
       {labelText && <label htmlFor={id}>{labelText}</label>}
       {/* {labelText ? <label htmlFor={id}>{labelText}</label> : ''} */}
-      <input className={styles.input} id={id} type={type} {...rest} disabled />
+      <input className={styles.input} id={id} type={type} {...rest} />
     </>
   );
 }
