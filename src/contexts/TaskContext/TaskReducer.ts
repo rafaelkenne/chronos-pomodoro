@@ -58,7 +58,7 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel) {
       return {
         ...state,
         secondsRemaining: action.payload.secondsRemaining,
-        formatSecondsToMinutes: formatSecondsToMinutes(action.payload.secondsRemaining),
+        formattedSecondsRemaining: formatSecondsToMinutes(action.payload.secondsRemaining),
       };
     }
   }
