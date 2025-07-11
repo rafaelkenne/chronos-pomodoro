@@ -10,7 +10,7 @@ self.onmessage = function (event) {
 
   const endDate = activeTask.startDate + secondsRemaining * 1000;
   const now = Date.now();
-  let countDownSeconds = Math.floor((endDate - now) / 1000);
+  let countDownSeconds = Math.ceil((endDate - now) / 1000);
 
   function tick() {
     self.postMessage(countDownSeconds);
