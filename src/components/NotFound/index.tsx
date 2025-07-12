@@ -1,17 +1,13 @@
 import { Container } from '../../components/Container';
 import { GenericHtml } from '../../components/GenericHtml';
 import { Heading } from '../../components/Heading';
+import { RouterLink } from '../RouterLink';
 import { MainTemplate } from '../templates/MainTemplate';
 
 export function NotFound() {
   return (
     <MainTemplate>
       <Container>
-        <h1>Página não encontrada</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, at et reiciendis eos ipsum earum? Dolorum
-          incidunt, sit veniam repellat praesentium doloremque vero facilis pariatur non ut minus vitae ratione!
-        </p>
         <GenericHtml>
           <Heading>404 - Página não encontrada 🚀</Heading>
           <p>
@@ -20,8 +16,9 @@ export function NotFound() {
           </p>
           <p>
             Mas calma, você não está perdido no espaço (ainda). Dá pra voltar em segurança para a{' '}
-            <a href='/'>página principal</a> ou <a href='/history'>para o histórico</a> — ou pode ficar por aqui e
-            fingir que achou uma página secreta que só os exploradores mais legais conseguem acessar. 🧭✨
+            <RouterLink href='/'>página principal</RouterLink> ou{' '}
+            <RouterLink href='/history'>para o histórico</RouterLink> — ou pode ficar por aqui e fingir que achou uma
+            página secreta que só os exploradores mais legais conseguem acessar. 🧭✨
           </p>
           <p>
             Se você acha que essa página deveria existir (ou se quiser bater um papo sobre viagem no tempo e buracos de
