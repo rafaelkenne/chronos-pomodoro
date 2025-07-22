@@ -60,15 +60,15 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
     localStorage.setItem('state', JSON.stringify(state));
 
     if (state.activeTask && playBeepRef.current === null) {
-      console.log('carregando audio...');
+      //console.log('carregando audio...');
 
       playBeepRef.current = loadBeep();
     } else {
-      console.log('zerando audio');
+      //console.log('zerando audio');
 
       playBeepRef.current = null;
     }
-  }, [state.activeTask]);
+  }, [state.activeTask, state]);
 
   return <TaskContext.Provider value={{ state, dispatch }}>{children}</TaskContext.Provider>;
 }
