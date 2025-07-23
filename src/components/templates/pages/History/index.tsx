@@ -46,6 +46,13 @@ function History() {
     dispatch({ type: TaskActionTypes.RESET_STATE });
   }, [confirmClearHistory, dispatch]);
 
+  useEffect(() => {
+    return () => {
+      console.log('Vou desmontar o history');
+      showMessage.dismiss();
+    };
+  }, []);
+
   function handleSortTasks({ field }: Pick<SortTasksOptions, 'field'>) {
     const newDirection = sortTasksOptions.direction === 'desc' ? 'asc' : 'desc';
     setSortTaskOptions({
@@ -62,6 +69,9 @@ function History() {
   function handleResetHistory() {
     showMessage.confirm('Tem certeza que deseja excluir', confirmation => {
       setconfirmClearHistory(confirmation);
+      // if (confirmation) {
+      //   dispatch({ type: TaskActionTypes.RESET_STATE });
+      // }
     });
     // if (!confirm('Tem certeza que deseja excluir?')) return;
     // dispatch({ type: TaskActionTypes.RESET_STATE });
