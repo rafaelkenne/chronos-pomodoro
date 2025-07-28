@@ -34,7 +34,7 @@ export function Form() {
     }
 
     const newTask: TaskModel = {
-      id: Date.now.toString(),
+      id: Date.now().toString(),
       name: taskName,
       startDate: Date.now(),
       completeDate: null,
